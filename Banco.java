@@ -21,7 +21,7 @@ public class Banco {
 
                     do {
 
-                        String mail = JOptionPane.showInputDialog("Introduzca su correo electronico (gmail): ");
+                        String mail  = JOptionPane.showInputDialog("Introduzca su correo electronico (gmail): ");
 
                         if (mail.contains("gmail.com")) {
                             confirmMail = true;
