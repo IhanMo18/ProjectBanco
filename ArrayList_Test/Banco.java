@@ -9,8 +9,17 @@ public class Banco {
        ArrayList<Clientes> listaClientes=new ArrayList<>();  //Duda
 
         JOptionPane.showMessageDialog(null,"         Bienvenido a este Software Bancario  \n    ########################## 99%     ");
-        JOptionPane.showMessageDialog(null," Primero debe crear su usuario en nuestro Banco ");
-        String name=JOptionPane.showInputDialog("Introduzca su nombre completo");
+        JOptionPane.showMessageDialog(null,"Primero debe crear su usuario en nuestro Banco");
+        String name=JOptionPane.showInputDialog("Introduzca su nombre completo: ");
+        int edad = Integer.parseInt(JOptionPane.showInputDialog("Introduzca su edad: "));
+        do{
+            String mail = JOptionPane.showInputDialog("Introduzca su direccion de gmail: "); 
+        }if(mail.contains("@gmail.com")){//aqui
+            confirmMail=true;
+        }else{
+            confirmMail=false;
+            JOptionPane.showMessageDialog(null,"Direccion de gmail INVALIDA!");
+        }
 
 
 
@@ -25,7 +34,7 @@ public class Banco {
                    //Name
                     String newUser = JOptionPane.showInputDialog("Introduzca su nombre y apellidos : ");
                    //Edad
-                    int edad = Integer.parseInt(JOptionPane.showInputDialog("Introduzca su edad: "));
+                    edad = Integer.parseInt(JOptionPane.showInputDialog("Introduzca su edad: "));
                     //Mail
                    String mail;
                     do {
