@@ -17,8 +17,8 @@ public class Clientes {
          this.mail=mail;
      }
 
-     Clientes(double money){
-         this.money=money;
+     Clientes(double moneyCliente){
+         this.money=moneyCliente;
      }
 
      //Getters and Setter
@@ -60,13 +60,20 @@ public class Clientes {
          return ID;
      }
 
+     public void SetMoney(double money){
+         this.money=money;
+     }
+
      public double GetMoney(){
          return money;
      }
 
-     public void Depositar(double money){
-         money=this.money;
+
+     public double TransferMony(double moneyTransfer){
+         this.money+=moneyTransfer;
+         return this.money;
      }
+
 
 
 
