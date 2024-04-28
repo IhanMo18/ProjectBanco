@@ -78,7 +78,7 @@ public class Banco {
                         if (cuestion.equalsIgnoreCase("si")) {
                             break;
                         } else {
-                            salir = false;//lklkjklls
+                            salir = false;//lklkjkllsl
                         }
 
                     } else if (quest.equalsIgnoreCase("no")) {
