@@ -90,7 +90,7 @@ public class Banco {
             case 2:
 
 
-        }while(salir=true);
+        }while(salir);
     }
 
 
