@@ -2,7 +2,7 @@ package ArrayList_Test;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
-public class Banco {//caca
+public class Banco {
 
     public static void main(String[] args) {
         boolean confirmMail;
@@ -12,7 +12,6 @@ public class Banco {//caca
         JOptionPane.showMessageDialog(null,"Primero debe crear su usuario en nuestro Banco");
         String name=JOptionPane.showInputDialog("Introduzca su nombre completo: ");
         int edad = Integer.parseInt(JOptionPane.showInputDialog("Introduzca su edad: "));
-
         String mail;
         do {
             mail = JOptionPane.showInputDialog("Introduzca su direccion de gmail: ");
@@ -23,7 +22,17 @@ public class Banco {//caca
                 confirmMail = false;
                 JOptionPane.showMessageDialog(null, "Direccion de gmail INVALIDA!");
             }
-        }while();
+        }while(!confirmMail);
+      //Key
+       String key;
+        do {
+            key = JOptionPane.showInputDialog("Introduzca su nueva clave: ");
+            if (key.length() < 8) {
+                JOptionPane.showMessageDialog(null, "Error,clvae invalida,debe ser mayor de 8 digitos");
+            } else if (key.length()>8) {
+                JOptionPane.showMessageDialog(null,"Clave Guardada con Exito!!!");
+            }
+        }while(key.length()<8);
 
 
 
@@ -51,13 +60,13 @@ public class Banco {//caca
                         }
                     } while (!confirmMail);
                    //Key
-                   String key;
+                   String keyUser;
                   do {
-                     key = JOptionPane.showInputDialog("Introduzca su nueva clave: ");
-                      if (key.length() < 8) {
+                     keyUser = JOptionPane.showInputDialog("Introduzca su nueva clave: ");
+                      if (keyUser.length() < 8) {
                           JOptionPane.showMessageDialog(null, "Error,clvae invalida,debe ser mayor de 8 digitos");
                       }
-                  }while(key.length()<8);
+                  }while(keyUser.length()<8);
 
                    Clientes cliente= new Clientes(newUser,edad,key,mail);
                    listaClientes.add(cliente);
