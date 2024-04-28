@@ -1,11 +1,12 @@
 package ArrayList_Test;
 import java.util.Random;
+import java.util.stream.LongStream;
 
 public class Clientes {
      private String name;
      private int edad;
      private String key;
-     private  int ID;
+     private LongStream ID;
      private String mail;
      private double money;
 
@@ -53,10 +54,10 @@ public class Clientes {
      }
 
      public void SetID(){
-         var random = Math.random()*10000;
-         random=this.ID;
+         Random numeroRandom=new Random(1000);
+        this.ID= numeroRandom.longs();
      }
-     public int GetID(){
+     public LongStream GetID(){
          return ID;
      }
 
@@ -69,10 +70,12 @@ public class Clientes {
      }
 
 
-     public double TransferMony(double moneyTransfer){
+     public double DepositMoney(double moneyTransfer){
          this.money+=moneyTransfer;
          return this.money;
      }
+
+
 
 
 
