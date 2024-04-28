@@ -17,6 +17,10 @@ public class Clientes {
          this.mail=mail;
      }
 
+     Clientes(double money){
+         this.money=money;
+     }
+
      //Getters and Setter
      public void SetName(String name){
          name=this.name;
@@ -63,6 +67,8 @@ public class Clientes {
      public void Depositar(double money){
          money=this.money;
      }
+
+
 
 
 

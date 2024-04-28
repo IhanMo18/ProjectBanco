@@ -23,7 +23,7 @@ public class Banco {
                 confirmMail = false;
                 JOptionPane.showMessageDialog(null, "Direccion de gmail INVALIDA!");
             }
-        }while()
+        }while();
 
 
 
@@ -40,9 +40,9 @@ public class Banco {
                    //Edad
                     edad = Integer.parseInt(JOptionPane.showInputDialog("Introduzca su edad: "));
                     //Mail
-                   String mail;
+                   String mailUser;
                     do {
-                         mail = JOptionPane.showInputDialog("Introduzca su correo electronico (gmail): ");
+                         mailUser = JOptionPane.showInputDialog("Introduzca su correo electronico (gmail): ");
                         if (mail.contains("@gmail.com")) {
                             confirmMail = true;
                         } else {
@@ -51,7 +51,13 @@ public class Banco {
                         }
                     } while (!confirmMail);
                    //Key
-                   String key=JOptionPane.showInputDialog("Introduzca su nueva clave: ");
+                   String key;
+                  do {
+                     key = JOptionPane.showInputDialog("Introduzca su nueva clave: ");
+                      if (key.length() < 8) {
+                          JOptionPane.showMessageDialog(null, "Error,clvae invalida,debe ser mayor de 8 digitos");
+                      }
+                  }while(key.length()<8);
 
                    Clientes cliente= new Clientes(newUser,edad,key,mail);
                    listaClientes.add(cliente);
@@ -65,8 +71,9 @@ public class Banco {
        }
 
 
-
     }
+
+
   /*  public static boolean KeyReview(String key){
       String keyUser=
         if(key==)*/
