@@ -7,6 +7,8 @@ public class Clientes {
      private String key;
      private  int ID;
      private String mail;
+     private double money;
+
 
      Clientes(String name,int edad,String key,String mail){
          this.name=name;
@@ -52,6 +54,14 @@ public class Clientes {
      }
      public int GetID(){
          return ID;
+     }
+
+     public double GetMoney(){
+         return money;
+     }
+
+     public void Depositar(double money){
+         money=this.money;
      }
 
 

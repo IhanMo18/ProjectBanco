@@ -1,9 +1,12 @@
 package ArrayList_Test;
 import javax.swing.*;
+import java.util.ArrayList;
+
 public class Banco {
 
     public static void main(String[] args) {
         boolean confirmMail;
+       ArrayList<Clientes> listaClientes=new ArrayList<>();  //No lo voy a usar por ahora
 
         JOptionPane.showMessageDialog(null,"         Bienvenido a este Software Bancario  \n    ########################## 99%     ");
 
@@ -34,7 +37,14 @@ public class Banco {
                    String key=JOptionPane.showInputDialog("Introduzca su nueva clave: ");
 
                    Clientes cliente= new Clientes(name,edad,key,mail);
+                   listaClientes.add(cliente);
+               }else if (quest.equalsIgnoreCase("no")){
+
                }
+
+
+           case 2:
+
        }
 
 
