@@ -26,6 +26,8 @@ public class Banco {
                 JOptionPane.showMessageDialog(null, "Direccion de gmail INVALIDA!");
             }
         }while(!confirmMail);
+        double money=Double.parseDouble(JOptionPane.showInputDialog("Con cuanto dinerp desea comenzar: "));
+        Clientes dineroCliente=new Clientes(money);
 
         //Contrasena
         String key;
@@ -42,7 +44,7 @@ public class Banco {
         do {
             int operacion = Integer.parseInt(JOptionPane.showInputDialog("Introduzca la opcion que desea realizar: \n" +
                     " 1-Agregar usuario \n " + "2-Consultar Saldo \n" + " 3-Informacion general \n " + "4-Realizar Retiro \n " +
-                    "5-Realizar Transferencia \n" + " 6-Configurar Usuario "));
+                    "5-Realizar Transferencia \n" + " 6-Configurar Usuario " ));
 
             switch (operacion) {
                 case 1:
@@ -78,21 +80,19 @@ public class Banco {
                         if (cuestion.equalsIgnoreCase("si")) {
                             break;
                         } else {
-                            salir = false;//lklkjkllsl
+                            salir = false;
                         }
 
                     } else if (quest.equalsIgnoreCase("no")) {
                         salir = false;
                     }
 
+                    case 2:
+
             }
-
-            case 2:
-
 
         }while(salir);
     }
 
 
-}
 }

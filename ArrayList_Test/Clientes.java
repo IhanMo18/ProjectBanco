@@ -54,7 +54,7 @@ public class Clientes {
      }
 
      public void SetID(){
-         Random numeroRandom=new Random(1000);
+         Random numeroRandom=new Random(10000);
         this.ID= numeroRandom.longs();
      }
      public LongStream GetID(){
@@ -70,10 +70,10 @@ public class Clientes {
      }
 
 
-     public double DepositMoney(double moneyTransfer){
-         this.money+=moneyTransfer;
-         return this.money;
+     public void DepositMoney(double moneyDeposit){
+         this.money+=moneyDeposit;
      }
+
 
 
 
