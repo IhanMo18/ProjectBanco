@@ -12,14 +12,18 @@ public class Banco {
         JOptionPane.showMessageDialog(null,"Primero debe crear su usuario en nuestro Banco");
         String name=JOptionPane.showInputDialog("Introduzca su nombre completo: ");
         int edad = Integer.parseInt(JOptionPane.showInputDialog("Introduzca su edad: "));
-        do{
-            String mail = JOptionPane.showInputDialog("Introduzca su direccion de gmail: "); 
-        }if(mail.contains("@gmail.com")){//aqui
-            confirmMail=true;
-        }else{
-            confirmMail=false;
-            JOptionPane.showMessageDialog(null,"Direccion de gmail INVALIDA!");
-        }
+
+        String mail;
+        do {
+            mail = JOptionPane.showInputDialog("Introduzca su direccion de gmail: ");
+
+            if (mail.contains("@gmail.com")) {//aqui
+                confirmMail = true;
+            } else {
+                confirmMail = false;
+                JOptionPane.showMessageDialog(null, "Direccion de gmail INVALIDA!");
+            }
+        }while()
 
 
 
