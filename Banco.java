@@ -13,23 +13,27 @@ public class Banco {
 
        switch (operacion){
            case 1:
-               String quest=JOptionPane.showInputDialog("Desea agregar un nuevo usuario ? \n Yes \n No");
+               String quest = JOptionPane.showInputDialog("Desea agregar un nuevo usuario ? \n Yes \n No");
                if(quest.equalsIgnoreCase("yes")) {
+                   //Name
                     String name = JOptionPane.showInputDialog("Introduzca su nombre y apellidos : ");
+                   //Edad
                     int edad = Integer.parseInt(JOptionPane.showInputDialog("Introduzca su edad: "));
-
-
+                    //Mail
+                   String mail;
                     do {
-
-                        String mail  = JOptionPane.showInputDialog("Introduzca su correo electronico (gmail): ");
-
-                        if (mail.contains("gmail.com")) {
+                         mail = JOptionPane.showInputDialog("Introduzca su correo electronico (gmail): ");
+                        if (mail.contains("@gmail.com")) {
                             confirmMail = true;
                         } else {
                             confirmMail = false;
                             JOptionPane.showMessageDialog(null, "  !!!Dirrecion de Gmail no valida!!!  ");
                         }
                     } while (!confirmMail);
+                   //Key
+                   String key=JOptionPane.showInputDialog("Introduzca su nueva clave: ");
+
+                   Clientes cliente= new Clientes(name,edad,key,mail);
                }
        }
 
